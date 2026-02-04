@@ -2,16 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:playground_1/helpers/route_names.dart';
 import 'package:playground_1/t1_widgets/t1_widgets.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+void main() => runApp(const MainApp());
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  Widget build(BuildContext context) => MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
         RouteNames.expanded: (context) => ExpandedView(),
@@ -23,5 +20,4 @@ class MainApp extends StatelessWidget {
       initialRoute: RouteNames.statefulBuilder, // <- Change this and do a hot restart to view 
       // a different example
     );
-  }
 }
